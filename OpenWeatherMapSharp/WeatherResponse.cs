@@ -1,20 +1,29 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using System;
 
 namespace OpenWeatherMapSharp {
 	public class WeatherResponse {
+		/// <summary>
+		/// Contains positional data regarding the query location.
+		/// </summary>
 		[JsonProperty("coord")]
 		public Coordinates Location { get; set; }
-
+		
 		[JsonProperty("weather")]
 		public WeatherCollection[] Weather { get; set; }
 
 		[JsonProperty("main")]
 		public Main Data { get; set; }
 
+		/// <summary>
+		/// Contains wind data of the query location.
+		/// </summary>
 		[JsonProperty("wind")]
 		public WindData Wind { get; set; }
 
+		/// <summary>
+		/// Contains cloud data of the query location.
+		/// </summary>
 		[JsonProperty("clouds")]
 		public CloudsData Clouds { get; set; }
 
@@ -32,9 +41,15 @@ namespace OpenWeatherMapSharp {
 
 		[Serializable]
 		public class Coordinates {
+			/// <summary>
+			/// The longitude of the location.
+			/// </summary>
 			[JsonProperty("lon")]
 			public float Longitude { get; set; }
 
+			/// <summary>
+			/// The latitude of the location.
+			/// </summary>
 			[JsonProperty("lat")]
 			public float Latitude { get; set; }
 		}
