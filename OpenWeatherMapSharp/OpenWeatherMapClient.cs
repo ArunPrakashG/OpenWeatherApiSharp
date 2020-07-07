@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using OpenWeatherMapSharp.Exceptions;
 using System;
 using System.Net;
@@ -31,7 +31,18 @@ namespace OpenWeatherMapSharp {
 		private string GenerateRequestUrl(int locationCode, string countryCode) => $"{BASE_URL}?zip={locationCode},{countryCode}&appid={AccessToken}";
 
 		/// <summary>
-		/// Get the weather response.
+		/// sync method to get the weather response.
+		/// </summary>
+		/// <param name="_locPinCode">The pin code of the location.</param>
+		/// <param name="_countryCode">The country code of the location country.</param>		
+		/// <param name="maxRetryCount">The maximum number of tries the request has to retry when timeout errors occur.</param>
+		/// <returns><see cref="WeatherResponse"/> result.</returns>
+		/// <exception cref="ArgumentNullException"/>
+		/// <exception cref="NetworkUnavailableException"/>
+		public WeatherResponse GetWeather(int _locPinCode, string _countryCode, int maxRetryCount = MAX_RETRY_COUNT) => GetWeatherAsync(_locPinCode, _countryCode, default, maxRetryCount).Result;
+
+		/// <summary>
+		/// Async method to get the weather response.
 		/// </summary>
 		/// <param name="_locPinCode">The pin code of the location.</param>
 		/// <param name="_countryCode">The country code of the location country.</param>
