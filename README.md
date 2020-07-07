@@ -1,6 +1,6 @@
-# OpenWeatherMapSharp
+# OpenWeatherApiSharp
 
-.NET Standard library to wrap around `api.openweathermap.org` API.
+Unoffical .NET Standard library to wrap around `api.openweathermap.org` API.
 
 ## Sample Usage
 
