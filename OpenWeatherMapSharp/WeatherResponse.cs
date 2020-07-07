@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
 using System;
 
-namespace OpenWeatherMapSharp {
+namespace OpenWeatherApiSharp {
 	public class WeatherResponse {
 		/// <summary>
 		/// Contains positional data regarding the query location.

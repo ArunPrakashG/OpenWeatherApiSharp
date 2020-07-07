@@ -1,5 +1,5 @@
 using Newtonsoft.Json;
-using OpenWeatherMapSharp.Exceptions;
+using OpenWeatherApiSharp.Exceptions;
 using System;
 using System.Net;
 using System.Net.Http;
@@ -7,7 +7,7 @@ using System.Net.NetworkInformation;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace OpenWeatherMapSharp {
+namespace OpenWeatherApiSharp {
 	public sealed class OpenWeatherMapClient : IDisposable {
 		private const int MAX_RETRY_COUNT = 3;
 		private const string BASE_URL = "https://api.openweathermap.org/data/2.5/weather";
