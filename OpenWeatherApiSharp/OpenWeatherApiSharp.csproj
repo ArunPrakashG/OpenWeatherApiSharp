@@ -6,10 +6,10 @@
     <Authors>Arun Prakash</Authors>
     <Description>.NET Standard library to wrap around api.openweathermap.org API.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/ArunPrakashG/OpenWeatherMapSharp</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/ArunPrakashG/OpenWeatherMapSharp</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/ArunPrakashG/OpenWeatherApiSharp</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ArunPrakashG/OpenWeatherApiSharp</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
-    <PackageTags>open-weather, weather, C#, .net</PackageTags>
+    <PackageTags>open-weather, weather, csharp, dotnet</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
